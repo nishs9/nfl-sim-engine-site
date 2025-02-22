@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  frontend:
+    environment:
+      - PORT=${PORT}
+      - NGINX_PORT=${NGINX_PORT}
+    build: .
+    container_name: nfl-sim-engine-site
+    ports:
+      - "${PORT}:${NGINX_PORT}"
+    restart: always
