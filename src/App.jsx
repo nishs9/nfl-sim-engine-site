@@ -6,7 +6,9 @@ import TeamSelector from './components/TeamSelector';
 import SimulationTable from './components/SimulationTable';
 import FeaturedGameSection from './components/FeaturedGameSection';
 import logo from './images/site_logo.jpg';
-import SIM_ENGINE_API_URL from './secrets';
+
+// Use environment variable with fallback for development
+const SIM_ENGINE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 const App = () => {
   useEffect(() => {
