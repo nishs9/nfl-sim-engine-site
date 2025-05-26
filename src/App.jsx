@@ -8,10 +8,15 @@ import FeaturedGameSection from './components/FeaturedGameSection';
 import logo from './images/site_logo.jpg';
 
 // Use environment variable with fallback for development
-const SIM_ENGINE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const SIM_ENGINE_API_URL = import.meta.env.VITE_API_URL;
 
-// Debug log to verify the API URL
+// Debug logs
+console.log('All env vars:', import.meta.env);
 console.log('API URL:', SIM_ENGINE_API_URL);
+
+if (!SIM_ENGINE_API_URL) {
+  console.error('VITE_API_URL is not defined!');
+}
 
 const App = () => {
   useEffect(() => {
