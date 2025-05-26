@@ -10,6 +10,9 @@ import logo from './images/site_logo.jpg';
 // Use environment variable with fallback for development
 const SIM_ENGINE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
+// Debug log to verify the API URL
+console.log('API URL:', SIM_ENGINE_API_URL);
+
 const App = () => {
   useEffect(() => {
     document.title = 'NFL Simulation Engine';
